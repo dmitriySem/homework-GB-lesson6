@@ -59,7 +59,9 @@ class lesson5{
         Console.Clear();
 
         //Random rand = new Random();
-        string str = "papa";
+        //string str = "шабаш";
+        //string str = "шаг";
+        string str = "шалаш";
 
         /*int lengthStr = rand.Next(1, 20);
 
@@ -70,13 +72,22 @@ class lesson5{
 
     
         int i = 0, j = str.Length - 1;
+        int k = 0;
         while (i < j)
-            if (str[i++] != str[j--]) 
+            if (str[i++] == str[j--]) 
+                k++;
+
+        if (k != (str.Length-1)/2) 
                 Console.WriteLine($"Строка: {str} не является палиндромом"); 
             else 
                 Console.WriteLine($"Строка: {str}  является палиндромом");
+
+                 
+
         
      }
+
+
 
 
 }
